@@ -1,0 +1,33 @@
+﻿@model Comp229_301052117_Assign3.Models.Recipes
+
+
+@if (Model != null)
+{
+    <div id="displayPageContainer" class="container">
+        <div class="panel-heading text-center"><h2>@Model.DishName</h2></div>
+        <img id="foodImage" alt="Image of food" />
+        <h4>Author</h4>
+        <p>@Model.Author </p>
+        <h4>Ingredients</h4>
+        <p>@Model.ingredients1</p>
+        <p>@Model.ingredients2</p>
+        <p>@Model.ingredients3</p>
+
+        @* Loop Through the list of ingredients if possible *@
+        @*<p>@Model.Ingredients1</p>
+        <p>@Model.Ingredients2</p>
+        <p>@Model.Ingredients3</p>*@
+
+        <h4>Description</h4>
+        <p>@Model.Description</p>
+        <h4>Category</h4>
+        <p>@Model.Category</p>
+        <h4>Servings</h4>
+        <p>This recipe feeds @Model.Servings people</p>
+        <h4>Review</h4>
+        <p>@Model.review</p>
+
+    </div>
+}
+
+

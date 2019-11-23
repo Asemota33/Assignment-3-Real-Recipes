@@ -1,0 +1,27 @@
+﻿@model Comp229_301052117_Assign3.Models.Recipes
+
+
+<h1 class="text-center mt-5 mb-5">Add Review </h1>
+
+<div class="ml-5 mr-5 list-group">
+    <form asp-action="Review" method="post">
+        <div class="form-group">
+            <label asp-for="review">Review:</label>
+            <textarea class="form-control" asp-for="review" rows="10"></textarea>
+        </div>
+        @*These hidden forms are used to stored transformed information*@
+        <input type="hidden" asp-for="RecipesID" />
+        <input type="hidden" asp-for="Author" />
+        <input type="hidden" asp-for="Servings" />
+        <input type="hidden" asp-for="DishName" />
+        <input type="hidden" asp-for="Description" />
+        <input type="hidden" asp-for="Instructions" />
+        <input type="hidden" asp-for="Category" />
+        <input type="hidden" asp-for="ingredients1" />
+        <input type="hidden" asp-for="ingredients2" />
+        <input type="hidden" asp-for="ingredients3" />
+
+        <button class="btn btn-primary" type="submit">Save</button>
+        <a class="btn btn-primary" asp-controller="Home" asp-action="DataPage">Cancel</a>
+    </form>
+</div>
